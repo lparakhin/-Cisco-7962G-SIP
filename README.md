@@ -30,13 +30,13 @@ Each handset will require an SEP configuration files. The filenames must be SEP0
 
 ### [XMLDefault.cnf.xml](../master/XMLDefault.cnf.xml) - Main System Config
 
-You only need to change one line in this file for the 7942:
+You only need to change one line in this file for the 7962:
 
 `<processNodeName>PUT IP OF PHONE SERVER HERE</processNodeName>`
 
 But you should also check that the load information matches the firmware you downloaded:
 
-`<loadInformation model="Cisco 7942">SIP42.9-4-2SR3-1S</loadInformation>`
+`<loadInformation model="Cisco 7962">SIP42.9-4-2SR3-1S</loadInformation>`
 
 The SIP42.9-4-2SR3-1S is taken directly from the SIP42 loads file name.  If you have other models of phone with different firmware you can add multiple loadInformation lines to cover this.
 
