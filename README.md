@@ -6,9 +6,9 @@ During boot the handsets will discover the TFTP server via DHCP option 66 and/or
 
 ![image](https://user-images.githubusercontent.com/78740726/206854440-2cec49d0-ea0d-44bd-8079-42669cf0a410.png)
 
-## Reset
+# Reset
 
-# Soft Reset
+## Soft Reset
 
 The code for the soft factory reset is: 123456789*0# 
 A soft reset does the following: 
@@ -16,10 +16,21 @@ A soft reset does the following:
 6. reboots 
 7. phone recovers default loads file from TFTP server
 
-#Total Hard Reset
+## Total Hard Reset
 
 The code for the total hard reset is: 3491672850*# A total hard reset formats /flash0 blowing away everything except CNU. All settings and personalization of the phone is removed.
 
-#Hard Reset with Network Setting Preservation
+## Hard Reset with Network Setting Preservation
 
 The code for the network preservation hard reset is: *7412369#085 And it also does a complete format of /flash0 — yet it preserves the network settings so that after the format, any static IP and other network settings are preserved. The settings are stored in volatile RAM, so it is important to not remove power to the phone during this process.
+
+# Base Configuration Files
+
+Each handset will require an SEP configuration files. The filenames must be SEP000000000000.cnf.xml where the 000000000000 is the MAC address of the Cisco handset and XMLDefault.cnf.xml.
+
+# Dialplan
+The included dialplan.xml gives some examples available. The dialplan file tells the handset how long to pause before dialling a number once it has been entered.
+
+# Optional files
+CTLSEP[MAC].tlv, ITLSEP[MAC].tlv, ITLFile.tlv can be empty
+
