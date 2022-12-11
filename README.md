@@ -92,7 +92,12 @@ The sipLines section is probably where you want to spend most of your time, this
   
 
 # Dialplan
-The included dialplan.xml gives some examples available. The dialplan file tells the handset how long to pause before dialling a number once it has been entered.
+The included dialplan.xml gives some examples available. The dialplan file tells the handset how long to pause before dialling a number once it has been entered. Simple dialplan:
+```xml
+<DIALTEMPLATE>
+<TEMPLATE MATCH="*" Timeout="3"/>
+</DIALTEMPLATE>
+```
 
 # Optional files
 CTLSEP[MAC].tlv, ITLSEP[MAC].tlv, ITLFile.tlv can be empty
