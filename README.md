@@ -8,6 +8,8 @@ During boot the handsets will discover the TFTP server via DHCP option 66 and/or
 
 # Reset
 
+Power on the phone while holding the # key. Keep it held until the orange line buttons (top right) are flashing.
+
 ## Soft Reset
 
 The code for the soft factory reset is: 123456789*0# 
